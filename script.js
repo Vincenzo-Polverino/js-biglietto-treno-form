@@ -11,7 +11,7 @@ const resultEl = document.getElementById('result');
 formEl.addEventListener('submit', function (e) {
     e.preventDefault()
     console.log(e.target.user_name.value,);
-    console.log(e.target.user_km.value,'Km');
+    console.log(e.target.user_km.value, 'Km');
     console.log(e.target.user_age.value);
 
     const price_for_km = 0.21;
@@ -22,16 +22,16 @@ formEl.addEventListener('submit', function (e) {
     if (user_ageEl.value == "minor") {
 
         price *= 0.8;
-        discount_message = 'Biglietto Scontato (20%)';
-        
+        discount_message = 'Biglietto Junior';
+
 
     } else if (user_ageEl.value == "senior") {
 
         price *= 0.6;
-        discount_message = 'Biglietto Scontato (40%)';
+        discount_message = 'Biglietto Senior';
 
-    }else{
-    discount_message = 'Biglietto Standard';
+    } else {
+        discount_message = 'Biglietto Standard';
     }
 
     resultEl.innerHTML = `
