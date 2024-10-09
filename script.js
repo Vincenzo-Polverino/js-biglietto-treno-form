@@ -14,23 +14,22 @@ formEl.addEventListener('submit', function (e) {
     console.log(e.target.user_age.value);
 
     const price_for_km = 0.21;
-    let price = user_kmEl * price_for_km;
+    let price = user_kmEl.value * price_for_km;
 
 
 
-    if (user_ageEl.value == 'Minorenne') {
+    if (user_ageEl.value == "minor") {
 
         price = price * 0.8;
 
-    } else if (user_ageEl.value == "Anziano") {
+    } else if (user_ageEl.value == "senior") {
 
         price = price * 0.6;
 
     }
 
     console.log(price.toFixed(2));
-     
 
 }
-    
+
 )
